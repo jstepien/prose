@@ -1,0 +1,7 @@
+*.jar
+*.swp
+.cake
+build
+classes
+lib
+pom.xml
