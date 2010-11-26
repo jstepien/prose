@@ -1,0 +1,56 @@
+Prose
+=====
+
+Experimenting with prose generation using Markov chains.
+
+Usage
+-----
+
+    $ lein repl
+    user=> (require 'prose.core)
+    nil
+    user=> (prose.core/teach (slurp "example.txt"))
+    nil
+    user=> (prose.core/write 400)
+    "o kału miała parkan, chwyciły go ręce ojcowskie.\n\nTeraz już zgasły
+    wszelkiego prawa panowania uprzywilejowanych deptani, ciemiężeni, wyzuwani
+    ze wszelkiego prawa. Ileż to razy powracali ci, których już nie ma nawet
+    mowy. Jest obietnica, że taki pociąg, dążący z daleka nie mogę pić, mój
+    prałacie miły. Wiesz. Serce. I tak jestem mocno pijana, gdy patrzę na
+    prawdziwie cześć mam dla żołnierzy — na cze"
+    user=> (prose.core/save-db)
+    true
+
+    $ lein repl
+    user=> (require 'prose.core)
+    nil
+    user=> (prose.core/load-db)
+    true
+    user=> (prose.core/write 200)
+    "w nocy chodzą dookoła koszar.\n\n— Znam ja miejsce, Karolina szpiegowskie
+    Zakamarki i obmierzłe żądze, a teraz dawał baczenie na przygotowane
+    arcysmaczne zakąski. W tym to czasie pani Wielosławskiemu. T"
+
+License
+-------
+
+Copyright (c) 2010 Jan Stępień
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
